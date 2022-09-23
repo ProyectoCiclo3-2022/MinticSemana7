@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Lista de Movimientos - Ciclo3</title>
+    <title>Lista de Movimientos - SFYN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -25,20 +25,40 @@
     <p th:inline="text" class="text-right">User: [[${#httpServletRequest.remoteUser}]]</p>
     <button type="button" class="btn btn-danger" style="float:right"><a th:href="@{/logout}">Cerrar Sesión</a></button>
 
-    <h1> Lista de Movimientos</h1>
+
+    <!--***********************************************************************************-->
+    <!--***************cabezote con nombre e imagen***************************************-->
+    <style>
+    h1 { color: #a0a607; }
+  </style>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center">Lista de Movimientos </h1>
+
+            </div>
+        </div>
+    </div>
+    <center><img class="center"src="https://www.nueva-iso-9001-2015.com/wp-content/uploads/2021/03/Sistema-de-gestion-de-calidad.jpg "width="40%"/>
+
+        <!--*****************************************************************************************-->
+        <!--*********************************************************************************************-->
 
     <!--***********Botones agrupados justificados********************** -->
     <div class="container">
         <br><br>
 
         <div class="btn-group btn-group-justified">
-            <a href="AgregarEmpresa" class="btn btn-success">Agregar Nueva Empresa</a>
-            <a href="" class="btn btn-primary">SIN USO</a>
-            <a href="VerEmpleados" class="btn btn-success">Ver Lista de Empleados</a>
+
+            <a th:href="@{/AgregarMovimiento}" class="btn btn-success">Agregar Nuevo Movimiento</a>
+            <a th:href="@{/VerEmpresas}" class="btn btn-primary">Ver lista de Empresas</a>
+            <a th:href="@{/VerEmpleados}" class="btn btn-success">Ver lista de Empleados</a>
         </div>
     </div>
+    <!--<button type="button" class="btn btn-primary"><a th:href="@{/VerEmpleados}">Ver lista de Empleados</a></button> -->
 
-
+    <!-- <button type="button" class="btn btn-primary"><a th:href="@{/VerEmpresas}">Ver lista de Empresas</a></button>-->
     <!-- ****************************************************-->
 
     <!--Dibujamos la tabla-->
@@ -95,13 +115,13 @@
     </div>
 
     <!-- vamos a crear un boton que sirva para agregar nuevos movimientos -->
-    <button type="button" class="btn btn-info"><a th:href="@{/AgregarMovimiento}">Agregar Nuevo Movimiento</a></button>
+   <!-- <button type="button" class="btn btn-info"><a th:href="@{/AgregarMovimiento}">Agregar Nuevo Movimiento</a></button>
     <br><br>
-    <!-- boton que me lleva a la lista de empresas -->
-    <button type="button" class="btn btn-primary"><a th:href="@{/VerEmpresas}">Ver lista de Empresas</a></button>
+     boton que me lleva a la lista de empresas -->
+   <!-- <button type="button" class="btn btn-primary"><a th:href="@{/VerEmpresas}">Ver lista de Empresas</a></button>-->
     <br><br>
     <!-- boton que me lleva a la lista de empleados -->
-    <button type="button" class="btn btn-primary"><a th:href="@{/VerEmpleados}">Ver lista de Empleados</a></button>
+    <!--<button type="button" class="btn btn-primary"><a th:href="@{/VerEmpleados}">Ver lista de Empleados</a></button> -->
 </div>
 
 <script th:inline="javascript">
